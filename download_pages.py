@@ -101,6 +101,6 @@ def main(from_year, to_year):
 
 if __name__ == '__main__':
 	if len(sys.argv) < 3:
-		print "Usage: Python download_pages.py start_year end_year"
+		print "Usage: Python download_pages.py <start_year> <end_year>"
 		sys.exit(0)
 	main(sys.argv[1], sys.argv[2])
