@@ -16,7 +16,7 @@ def download_and_save_movie_page(title, link, folder):
 	page = get_html_page(link)
 	#if not os.path.exists('/data/imdb'):
 	#	os.makedirs('/data/imdb')
-	with open(os.path.join('data/' + folder, title), 'w+') as fid:
+	with open(os.path.join('data/' + folder, title+".html"), 'w+') as fid:
 		fid.write(page)
 
 #Returns all the titles from the give wikipedia page
@@ -65,7 +65,7 @@ def download_rottentomatoes_pages(titles):
 
 		#We are directly in the movie page
 		else:
-			with open(os.path.join('data/rottentomatoes', title), 'w+') as fid:
+			with open(os.path.join('data/rottentomatoes', title+".html"), 'w+') as fid:
 				fid.write(results_page)
 		
 
